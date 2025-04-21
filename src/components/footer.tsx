@@ -1,4 +1,5 @@
 import { Button } from "flowbite-react";
+import Link from "next/link";
 import React from "react";
 import {
   FaFacebookF,
@@ -54,7 +55,7 @@ export default function FooterComponents() {
         <div>
           <h3 className="text-lg font-bold mb-4">Useful Links</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><a href="/">Home</a></li>
+            <li><Link href="/">Home</Link></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/projects">Projects</a></li>

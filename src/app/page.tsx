@@ -9,8 +9,7 @@ import {
   faMountainCity,
   faTrowelBricks,
 } from "@fortawesome/free-solid-svg-icons"; // versi Free
-import FeatureItem from "./atoms/home/feature_item";
-import { FaRegSun, FaStar, FaSun, FaTools } from "react-icons/fa";
+
 import { TabItem, Tabs } from "flowbite-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -592,19 +591,18 @@ export default function Home() {
                 image="/images/banner/hero-carousel-1.jpg"
                 title="Provision of Casing Pipe"
                 client="PT Molteksindo Abadi Nusantara"
-                period="May - June 2019"
+
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-2.jpg"
                 title="Housing Construction - Cinere Cluster"
                 client="PT Desatu Bangun Cipta"
-                period="Jan - July 2018"
+
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-3.jpg"
                 title="Project Management Team Services"
                 client="PT Pema Global Energi"
-                period="Aug 2024 - Present"
               />
             </div>
           </TabItem>
@@ -616,13 +614,13 @@ export default function Home() {
                 image="/images/banner/hero-carousel-1.jpg"
                 title="Land Clearing & 15 Housing Units"
                 client="PT Ashilla Belti Kontruksi"
-                period="2018"
+
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-2.jpg"
                 title="Cinere Cluster Housing"
                 client="PT Desatu Bangun Cipta"
-                period="Jan - July 2018"
+
               />
             </div>
           </TabItem>
@@ -634,13 +632,13 @@ export default function Home() {
                 image="/images/banner/hero-carousel-1.jpg"
                 title="Provision of OCTG"
                 client="PT Molteksindo Abadi Nusantara"
-                period="Mar - Apr 2019"
+
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-3.jpg"
                 title="Oli Exxon Pegasus 805 SPG II"
                 client="PT Wira Cipta Perkasa"
-                period="Jun 2024 - Present"
+
               />
             </div>
           </TabItem>
@@ -652,13 +650,13 @@ export default function Home() {
                 image="/images/banner/hero-carousel-3.jpg"
                 title="General Support & Maintenance"
                 client="PT Wira Cipta Perkasa"
-                period="2020 - 2022"
+
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-1.jpg"
                 title="Support for HSE Management"
                 client="PT Wira Cipta Perkasa"
-                period="2020 - 2022"
+
               />
             </div>
           </TabItem>
