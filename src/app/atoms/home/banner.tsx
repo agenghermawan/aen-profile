@@ -28,7 +28,7 @@ export default function Banner() {
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {/* Carousel Background (fixed) */}
-      <div className="fixed top-0 left-0 w-full h-screen -z-10">
+      <div className="w-full h-screen -z-10">
         <Carousel indicators={false}>
           {[
             "/images/banner/hero-carousel-1.jpg",

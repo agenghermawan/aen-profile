@@ -2,46 +2,47 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../atoms/home/navbar";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   const teamMembers = [
     {
-      name: "Walter White",
-      role: "Chief Executive Officer",
-      img: "/images/team-1.jpg",
-      desc: "Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow",
+      name: "Andi Pratama",
+      role: "Project Manager",
+      img: "https://randomuser.me/api/portraits/men/32.jpg",
+      desc: "Mengelola proyek dari perencanaan hingga penyelesaian dengan pendekatan yang strategis dan efisien.",
     },
     {
-      name: "Sarah Jhonson",
-      role: "Product Manager",
-      img: "/images/team-2.jpg",
-      desc: "Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores exercitationem ut",
+      name: "Sari Utami",
+      role: "Lead Engineer",
+      img: "https://randomuser.me/api/portraits/women/44.jpg",
+      desc: "Ahli dalam desain dan analisis teknik untuk berbagai proyek energi dan infrastruktur.",
     },
     {
-      name: "William Anderson",
-      role: "CTO",
-      img: "/images/team-3.jpg",
-      desc: "Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui",
+      name: "Budi Santoso",
+      role: "HR & Manpower Coordinator",
+      img: "https://randomuser.me/api/portraits/men/45.jpg",
+      desc: "Bertanggung jawab atas penyediaan dan penempatan tenaga kerja yang kompeten dan andal.",
     },
     {
-      name: "Amanda Jepson",
-      role: "Accountant",
-      img: "/images/team-4.jpg",
-      desc: "Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam quasi quam consectetur",
+      name: "Intan Maheswari",
+      role: "Procurement Specialist",
+      img: "https://randomuser.me/api/portraits/women/68.jpg",
+      desc: "Menyediakan solusi pengadaan yang efisien dan sesuai standar untuk kebutuhan proyek.",
     },
     {
-      name: "Brian Doe",
-      role: "Marketing",
-      img: "/images/team-5.jpg",
-      desc: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit",
+      name: "Rizky Nugraha",
+      role: "Quality Assurance",
+      img: "https://randomuser.me/api/portraits/men/56.jpg",
+      desc: "Menjamin kualitas kerja dan produk agar sesuai standar dan kebutuhan industri.",
     },
     {
-      name: "Josepha Palas",
-      role: "Operation",
-      img: "/images/team-6.jpg",
-      desc: "Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis fugit eligendi cupiditate vel",
+      name: "Dewi Lestari",
+      role: "Finance Officer",
+      img: "https://randomuser.me/api/portraits/women/39.jpg",
+      desc: "Mengelola keuangan proyek dengan cermat untuk memastikan efisiensi biaya dan profitabilitas.",
     },
   ];
 
@@ -139,11 +140,13 @@ export default function About() {
             </div>
 
             {/* Image */}
-            <div>
-              <img
+            <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]">
+              <Image
                 src="/images/banner/footer-bg.jpg"
                 alt="Our Story"
-                className="w-full h-auto object-cover rounded"
+                fill
+                className="object-cover rounded"
+                priority
               />
             </div>
           </div>
@@ -266,11 +269,13 @@ export default function About() {
           </div>
 
           {/* Image */}
-          <div className="w-full">
-            <img
-              src="/images/feature-image.jpg"
+          <div className="w-full relative h-[250px] sm:h-[300px] md:h-[400px]">
+            <Image
+              src="/images/banner/features-1.jpg"
               alt="Feature"
-              className="w-full rounded-lg shadow-md object-cover"
+              fill
+              className="object-cover rounded-lg shadow-md"
+              priority
             />
           </div>
         </div>

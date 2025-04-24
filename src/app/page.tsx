@@ -14,6 +14,7 @@ import { TabItem, Tabs } from "flowbite-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,6 +27,33 @@ export default function Home() {
       sectionRefs.current.push(el);
     }
   };
+
+  const services = [
+    {
+      image: "/images/banner/hero-carousel-1.jpg",
+      title: "Engineering & Project Management",
+      description:
+        "Menyediakan dukungan teknik inovatif dari studi kelayakan hingga desain rinci, konstruksi, commissioning, dan operasi untuk proyek industri energi.",
+    },
+    {
+      image: "/images/banner/hero-carousel-2.jpg",
+      title: "Manpower Supply",
+      description:
+        "Menyediakan SDM lokal maupun ekspatriat untuk fasilitas onshore dan offshore, baik penempatan kontrak maupun permanen sesuai kebutuhan klien.",
+    },
+    {
+      image: "/images/banner/hero-carousel-3.jpg",
+      title: "Fabrication Services",
+      description:
+        "Ahli dalam pembuatan pipa, tangki penyimpanan, dan bejana tekan untuk industri migas, air, dan pembangkit listrik dengan pengalaman global.",
+    },
+    {
+      image: "/images/banner/hero-carousel-4.jpg",
+      title: "Materials Supplied",
+      description:
+        "Menyediakan berbagai material, sparepart, pelumas, dan kebutuhan konstruksi lainnya yang sesuai standar untuk mendukung kelancaran operasional.",
+    },
+  ];
 
   useEffect(() => {
     const animations = [
@@ -69,78 +97,28 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
-          <div className="flex border border-[#364d59]/20 overflow-hidden">
-            <img
-              src="/images/banner/hero-carousel-1.jpg"
-              alt="Project 1"
-              className="w-[180px] object-cover h-[200px]"
-            />
-            <div className="p-6 text-left">
-              <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                Engineering & Project Management
-              </h3>
-              <p className="text-gray-600 text-sm">
-                Menyediakan dukungan teknik inovatif dari studi kelayakan hingga
-                desain rinci, konstruksi, commissioning, dan operasi untuk
-                proyek industri energi.
-              </p>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
+          {services.map((service, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col sm:flex-row border border-[#364d59]/20 overflow-hidden rounded-lg bg-white shadow-sm hover:shadow-md transition duration-300"
+            >
+              <div className="relative w-full sm:w-[225px] h-[200px] shrink-0">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 text-left">
+                <h3 className="font-semibold text-lg text-gray-800 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{service.description}</p>
+              </div>
             </div>
-          </div>
-
-          <div className="flex border border-[#364d59]/20 overflow-hidden">
-            <img
-              src="/images/banner/hero-carousel-2.jpg"
-              alt="Project 2"
-              className="w-[180px] object-cover h-[200px]"
-            />
-            <div className="p-6 text-left">
-              <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                Manpower Supply
-              </h3>
-              <p className="text-gray-600 text-sm">
-                Menyediakan SDM lokal maupun ekspatriat untuk fasilitas onshore
-                dan offshore, baik penempatan kontrak maupun permanen sesuai
-                kebutuhan klien.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex border border-[#364d59]/20 overflow-hidden">
-            <img
-              src="/images/banner/hero-carousel-3.jpg"
-              alt="Project 3"
-              className="w-[180px] object-cover h-[200px]"
-            />
-            <div className="p-6 text-left">
-              <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                Fabrication Services
-              </h3>
-              <p className="text-gray-600 text-sm">
-                Ahli dalam pembuatan pipa, tangki penyimpanan, dan bejana tekan
-                untuk industri migas, air, dan pembangkit listrik dengan
-                pengalaman global.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex border border-[#364d59]/20 overflow-hidden">
-            <img
-              src="/images/banner/hero-carousel-1.jpg"
-              alt="Project 4"
-              className="w-[180px] object-cover h-[200px]"
-            />
-            <div className="p-6 text-left">
-              <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                Materials Supplied
-              </h3>
-              <p className="text-gray-600 text-sm">
-                Menyediakan berbagai material, sparepart, pelumas, dan kebutuhan
-                konstruksi lainnya yang sesuai standar untuk mendukung
-                kelancaran operasional.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -276,11 +254,12 @@ export default function Home() {
       <section className="py-16 px-6 md:px-16 bg-white" ref={addToRefs}>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Image */}
-          <div>
-            <img
-              src="/images/company-about.jpg" // Ganti dengan foto asli perusahaan kalau ada
+          <div className="relative w-full h-64 sm:h-80 lg:h-96">
+            <Image
+              src="/images/banner/alt-services.jpg"
               alt="PT AEN team at work"
-              className="rounded-lg w-full object-cover"
+              fill
+              className="rounded-lg object-cover"
             />
           </div>
 
@@ -591,13 +570,11 @@ export default function Home() {
                 image="/images/banner/hero-carousel-1.jpg"
                 title="Provision of Casing Pipe"
                 client="PT Molteksindo Abadi Nusantara"
-
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-2.jpg"
                 title="Housing Construction - Cinere Cluster"
                 client="PT Desatu Bangun Cipta"
-
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-3.jpg"
@@ -614,13 +591,11 @@ export default function Home() {
                 image="/images/banner/hero-carousel-1.jpg"
                 title="Land Clearing & 15 Housing Units"
                 client="PT Ashilla Belti Kontruksi"
-
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-2.jpg"
                 title="Cinere Cluster Housing"
                 client="PT Desatu Bangun Cipta"
-
               />
             </div>
           </TabItem>
@@ -632,13 +607,11 @@ export default function Home() {
                 image="/images/banner/hero-carousel-1.jpg"
                 title="Provision of OCTG"
                 client="PT Molteksindo Abadi Nusantara"
-
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-3.jpg"
                 title="Oli Exxon Pegasus 805 SPG II"
                 client="PT Wira Cipta Perkasa"
-
               />
             </div>
           </TabItem>
@@ -650,13 +623,11 @@ export default function Home() {
                 image="/images/banner/hero-carousel-3.jpg"
                 title="General Support & Maintenance"
                 client="PT Wira Cipta Perkasa"
-
               />
               <ProjectCard
                 image="/images/banner/hero-carousel-1.jpg"
                 title="Support for HSE Management"
                 client="PT Wira Cipta Perkasa"
-
               />
             </div>
           </TabItem>

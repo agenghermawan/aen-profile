@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -6,7 +7,7 @@ export default function Navbar() {
     <header className="absolute top-0 left-0 w-full z-30">
       <nav className="flex items-center justify-between px-6 lg:px-20 py-4 text-white">
         <h1 className="text-2xl font-bold">
-          <span className="text-white">Up Construction</span>
+          <Image src="/images/logo/logo-aen.png" alt="Logo AEN" width={200} height={200} />
         </h1>
         <ul className="hidden md:flex gap-6 font-medium">
           {["home", "about", "services", "projects", "blog", "contact"].map(
