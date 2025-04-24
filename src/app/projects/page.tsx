@@ -131,7 +131,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, client }) => {
       <img
         src={image}
         alt={title}
-        className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+        className="w-full h-82 object-cover transition-transform duration-300 group-hover:scale-105"
       />
 
       {/* Overlay */}

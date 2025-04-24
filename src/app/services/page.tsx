@@ -327,7 +327,7 @@ export default function ServicePages() {
           {/* Image */}
           <div className="w-full">
             <img
-              src="/images/feature-image.jpg"
+              src="/images/banner/hero-carousel-5.jpg"
               alt="Tim profesional AEN"
               className="w-full rounded-lg shadow-md object-cover"
             />
