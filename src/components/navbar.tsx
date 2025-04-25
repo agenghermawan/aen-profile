@@ -44,8 +44,6 @@ const HeroWithNavbar = () => {
               "about",
               "services",
               "projects",
-              "blog",
-              "dropdown",
               "contact",
             ].map((page) => (
               <li key={page}>

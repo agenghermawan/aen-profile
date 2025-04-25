@@ -10,7 +10,7 @@ export default function Navbar() {
           <Image src="/images/logo/logo-aen.png" alt="Logo AEN" width={200} height={200} />
         </h1>
         <ul className="hidden md:flex gap-6 font-medium">
-          {["home", "about", "services", "projects", "blog", "contact"].map(
+          {["home", "about", "services", "projects", "contact"].map(
             (page) => (
               <li key={page}>
                 <Link
